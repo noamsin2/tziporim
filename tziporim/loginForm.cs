@@ -16,11 +16,61 @@ namespace tziporim
 {
     public partial class loginForm : Form
     {
-      //  Excel excel;
         public loginForm()
         {
-           // excel = new Excel(@"C:\Users\Noam\source\repos\tziporim\tziporim\TEST1.xlsx", 1);
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void loginForm_Load(object sender, EventArgs e)
+        {
+              
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            //homeForm hForm = new homeForm("asdf");
+            //hForm.Show();
+            //this.Hide();
+            string name = text_name.Text;
+            string password = text_password.Text;
+            if (!checkValidAccount(name, password))
+            {
+                MessageBox.Show("!שם משתמש או סיסמא לא נכונים");
+            }
+            else
+            {
+                homeForm hForm = new homeForm(name);
+                hForm.Show();
+                this.Hide();
+            }
+        }
+        private bool checkValidAccount(string name, string password)
+        {
+            Excel excel = new Excel(@"database2.xlsx", 1);
+            int cellIndex = 1;
+            string cell = excel.readCell(cellIndex, 0);
+            while (cell != "")
+            {
+                if (cell == name)
+                {
+                    string tempPW = excel.readCell(cellIndex, 2);
+                    if (tempPW == password)
+                    {
+                        excel.Close();
+                        return true;
+                    }
+                }
+                cell = excel.readCell(++cellIndex, 0);
+            }
+            excel.Close();
+            return false;
         }
 
         private void regNavBtn_Click(object sender, EventArgs e)
@@ -28,13 +78,6 @@ namespace tziporim
             registerForm regForm = new registerForm();
             regForm.Show();
             this.Hide();
-        }
-        
-
-        private void loginForm_Load(object sender, EventArgs e)
-        {
-           
-
         }
     }
 }

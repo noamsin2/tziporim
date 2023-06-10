@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,9 @@ namespace tziporim
         public Excel(string path, int sheet)
         {
             this.path = path;
-            wb = excel.Workbooks.Open(path);
+            wb = excel.Workbooks.Open(Directory.GetCurrentDirectory() + @"\" + path);
+
+            //wb = excel.Workbooks.Open(path);
             ws = wb.Worksheets[sheet];
         }
 

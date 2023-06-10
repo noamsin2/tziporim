@@ -59,5 +59,54 @@ namespace tziporim.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _584ab29ae583a46e8c837a31 {
+            get {
+                object obj = ResourceManager.GetObject("584ab29ae583a46e8c837a31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bird_3158784__340 {
+            get {
+                object obj = ResourceManager.GetObject("bird-3158784__340", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flock_migratory_birds_sky_creative_vintage_filter_retro_effect_545689_6969 {
+            get {
+                object obj = ResourceManager.GetObject("flock-migratory-birds-sky-creative-vintage-filter-retro-effect_545689-6969", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream newbird_wav {
+            get {
+                return ResourceManager.GetStream("newbird_wav", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_pokemon_go {
+            get {
+                object obj = ResourceManager.GetObject("pokemon-pokemon-go", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
